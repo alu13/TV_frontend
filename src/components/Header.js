@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Button} from "@material-ui/core";
+import { AppBar, Toolbar, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import {
@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
       <AppBar className="flex" position="sticky">
-          <Toolbar className="flex" classname={classes.toolBar}>
+          <Toolbar className="flex" className={classes.toolBar}>
             CONNECTECH
             <div className={classes.titleItemRight}>
             {headers.map(header => 
