@@ -21,7 +21,7 @@ export default function OpportunityDetails() {
     console.log(id);
 
     useEffect(() => {
-        fetch("http://localhost:3001/searchById", {
+        fetch("https://techvolunteersbackend.azurewebsites.net/searchById", {
         method: "POST", 
         headers: {
             'Accept': 'application/json',
