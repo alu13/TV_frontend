@@ -11,7 +11,7 @@ export default function Opportunities() {
     const [opportunities, setOpportunites] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/search", {
+        fetch("https://techvolunteersbackend.azurewebsites.net/search", {
         method: "POST", 
         headers: {
             'Accept': 'application/json',
