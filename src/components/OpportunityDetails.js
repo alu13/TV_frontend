@@ -28,9 +28,11 @@ export default function OpportunityDetails() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({query: id})
-      }).then(res => res.json()).then(data => {
-          setDetails(data[0]);
-    })}, [])
+        }).then(res => res.json()).then(data => {
+            setDetails(data[0]);
+        })
+        return () => {setDetails({})}
+    }, [])
 
     return (
         <Box sx={{"background-color":"#C4C4C4"}}>

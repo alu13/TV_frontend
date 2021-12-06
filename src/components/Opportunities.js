@@ -18,9 +18,11 @@ export default function Opportunities() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({query: query})
-      }).then(res => res.json()).then(data => {
-          setOpportunites(data);
-    })}, [])
+        }).then(res => res.json()).then(data => {
+            setOpportunites(data);
+        })
+        return () => {setOpportunites([])}
+    }, [])
 
     return (<Box sx={{display: "flex"}}>
         <FilterBar/>

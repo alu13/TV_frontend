@@ -2,6 +2,7 @@
 import Header from './components/Header'
 import Home from './components/Home'
 import Contact from './components/Contact'
+import NgoForm from './components/NgoForm'
 import './App.css';
 
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
@@ -19,6 +20,7 @@ function App() {
         <Route exact path= "/home" component={Home}/>
         <Route exact path = "/opportunities/:query" component={Opportunities}/>
         <Route exact path = "/opportunity/:id" component = {OpportunityDetails}/>
+        <Route exact path = "/form" component = {NgoForm}/>
         <Route exact path = "/">
           <Home/>
         </Route>

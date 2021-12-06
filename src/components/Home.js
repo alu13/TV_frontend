@@ -4,6 +4,7 @@ import Search from "./Search";
 
 import { makeStyles } from "@material-ui/core/styles";
 import {Button} from "@material-ui/core"
+import {Link} from "react-router-dom"
 
 const style = makeStyles({
     homeInfoCard: {
@@ -34,7 +35,7 @@ export default function Home() {
     <HomeInfoCard className={classes.homeInfoCard} title="For students" text="Our platform connects students and student-led clubs on campus with organizations especially NGOs and small businesses that need assistance with various tasks related to volunteering, consulting, development and implementation of various technology etc. This allows students the chance to work with local businesses to gain experience in all spheres depending on what they want to do."/>
     <HomeInfoCard className={classes.homeInfoCard} title="For non-profits" text="Our platform connects students and student-led clubs on campus with local organizations that need assistance with various tasks to help grow their businesses and allow our students to gain industry experience."/>
     </div>
-    <Button className={classes.highlightButton} mt={4}><a href="https://docs.google.com/forms/d/e/1FAIpQLSfhJIZh5faEZM86uliWdQiNM5xN-BXlnDPaV36sx_ByilKCbg/viewform?usp=pp_url">Are you a potential employer? Click here!</a></Button>
+    <Button className={classes.highlightButton} mt={4} component={Link} to="/form">Are you a potential employer? Click here!</Button>
     </div>
     );
 }
